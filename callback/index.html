@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exact OAuth Callback</title>
+</head>
+<body>
+  <h2>Exact Online OAuth Callback</h2>
+  <p>Copy the authorization code below and paste it where instructed:</p>
+  <textarea id="output" style="width:100%;height:150px;"></textarea>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code");
+    const state = params.get("state");
+
+    document.getElementById("output").value =
+      "CODE:\n" + code + "\n\nSTATE:\n" + state;
+  </script>
+</body>
+</html>
